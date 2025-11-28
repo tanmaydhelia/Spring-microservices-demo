@@ -72,7 +72,7 @@ public class QuizService {
 
 	    // Convert responses list to a Map for quick lookup: {questionId -> userAnswer}
 	    Map<String, String> responseMap = responses.stream()
-	            .collect(Collectors.toMap(Response::getId, Response::getRightAnswer));
+	            .collect(Collectors.toMap(Response::getId, Response::getUserAnswer));
 
 	    int score = 0;
 

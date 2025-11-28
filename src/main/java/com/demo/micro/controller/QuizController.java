@@ -12,6 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.demo.micro.model.QuestionWrapper;
+import com.demo.micro.model.Quiz;
+import com.demo.micro.model.Response;
+import com.demo.micro.service.QuizService;
+
 @RestController
 @RequestMapping("quiz")
 public class QuizController {
@@ -25,7 +30,8 @@ public class QuizController {
 	}
 	
 	@GetMapping("get/{quizId}")
-	public ResponseEntity<List<QuestionWrapper>> createQuiz(@PathVariable String quizId){
+	public ResponseEntity<List<QuestionWrapper
+	>> createQuiz(@PathVariable String quizId){
 		return quizService.getQuiz(quizId);
 	}
 	
